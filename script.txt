@@ -1,0 +1,12 @@
+document.getElementById('subscription-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    // Validação básica
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    
+    if (name && email) {
+        document.getElementById('subscription-form').reset();
+        document.getElementById('success-message').classList.remove('hidden');
+    }
+});
